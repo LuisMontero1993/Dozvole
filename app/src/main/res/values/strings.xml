@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Dozvole</string>
+    <string name="title_activity_panel_lateral">Panel_lateral</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">lamontero@unac.edu.co</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="name_user">Luis Montero</string>
+    <string name="login_user">User</string>
+    <string name="login_password">Password</string>
+    <string name="login_button">Sing in</string>
+    <string name="developers">©Enginners Unac</string>
+    <string name="Tipo_permiso">Regular</string>
+    <string name="Tipo3_permiso">Retiro</string>
+    <string name="Tipo2_permiso">Externado</string>
+    <string name="Idescriptor">Logo</string>
+    <string name="title_activity_contenidos">@string/app_name</string>
+    <string name="itempanellateral1">Respuestas</string>
+    <string name="itempanellateral2">Permisos</string>
+    <string name="itempanellateral3">Eventos</string>
+    <string name="itempanellateral4">Salir</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
