@@ -1,5 +1,6 @@
 package com.example.lds.dozvole;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.nfc.Tag;
@@ -12,12 +13,15 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
+
+import static com.google.android.gms.auth.api.signin.GoogleSignInOptions.DEFAULT_SIGN_IN;
 
 
 public class Login extends AppCompatActivity {
@@ -27,7 +31,7 @@ public class Login extends AppCompatActivity {
     private EditText Txtpassword;
     private ProgressBar cargar;
     private FirebaseAuth mAuth;
-
+    private ProgressDialog progress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +41,7 @@ public class Login extends AppCompatActivity {
         Txtemail = findViewById(R.id.Textemail);
         Txtpassword = findViewById(R.id.TextPassword);
         mAuth = FirebaseAuth.getInstance();
-        cargar=findViewById(R.id.progress);
-
+         progress = new ProgressDialog (this);
 
     }
 
@@ -61,7 +64,8 @@ public class Login extends AppCompatActivity {
             Toast.makeText(this, "Falta ingresar la contraseña", Toast.LENGTH_LONG).show();
             return;
         }
-        cargar.setVisibility(View.VISIBLE);
+        progress.show();
+        progress.setTitle("Verificando");
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -70,8 +74,7 @@ public class Login extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             FirebaseUser user = mAuth.getCurrentUser();
                             Toast.makeText(Login.this, "Bienvenido a Dozvole", Toast.LENGTH_LONG).show();
-                            Intent intencion = new Intent(getApplication(), contenidos.class);
-                            startActivity(intencion);
+                            Sendtomain();
 
                         } else {
                             if (task.getException() instanceof FirebaseAuthUserCollisionException) {//si se presenta una colisión
@@ -80,13 +83,22 @@ public class Login extends AppCompatActivity {
                                 Toast.makeText(Login.this, "Usuario No válido", Toast.LENGTH_LONG).show();
                             }
                         }
-                        cargar.setVisibility(View.INVISIBLE);
+                        progress.dismiss();
 
                     }
                 });
 
 
     }
+
+
+
+    private void Sendtomain(){
+        Intent intencion = new Intent(Login.this, contenidos.class);
+        startActivity(intencion);
+        finish();
+    }
+
 }
 
 

@@ -29,6 +29,9 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation files('C:/Users/lds/AndroidStudioProjects/Dozvole/gradle/wrapper/gradle-wrapper.jar')
     implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+
+    implementation 'com.android.support:cardview-v7:27.1.1'
 }
 
 
