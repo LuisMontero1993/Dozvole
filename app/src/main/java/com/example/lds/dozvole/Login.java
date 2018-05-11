@@ -8,6 +8,8 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.transition.Fade;
+import android.transition.Transition;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -32,10 +34,10 @@ public class Login extends AppCompatActivity {
     private ProgressBar cargar;
     private FirebaseAuth mAuth;
     private ProgressDialog progress;
+    private Transition transition;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         Txtemail = findViewById(R.id.Textemail);
