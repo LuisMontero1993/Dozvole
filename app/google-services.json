@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "403894305915",
+    "firebase_url": "https://dozvole-26808.firebaseio.com",
+    "project_id": "dozvole-26808",
+    "storage_bucket": "dozvole-26808.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403894305915:android:0021e4c19e3d3332",
+        "android_client_info": {
+          "package_name": "com.example.lds.dozvole"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "403894305915-s3a4sg7de48bmpkvl2ae3ff1rblco31d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lds.dozvole",
+            "certificate_hash": "148b3ea8843207d0aafb46d33873d7e2c81afcaf"
+          }
+        },
+        {
+          "client_id": "403894305915-djm5e449hqn3a8lnmrur7tlkp2touedp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVhHdYnbh8Kzw7otz9HHGnqLw4IEozYpc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "403894305915-djm5e449hqn3a8lnmrur7tlkp2touedp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

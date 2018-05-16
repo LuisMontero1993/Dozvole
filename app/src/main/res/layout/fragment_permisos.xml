@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    style="@style/Appgeneral"
+    android:layout_height="match_parent"
+    tools:context=".Permisos">
+        <LinearLayout
+            style="@style/fragment_permisos">
+
+            <TextView
+                style="@style/texttoolbar_fragment"
+                android:drawableLeft="@drawable/ic_chat_black"
+                android:text="@string/itempanellateral2"
+
+                />
+        </LinearLayout>
+
+    <Button
+        style="@style/Texview_permisos"
+        android:layout_height="74dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/Tipo_permiso" />
+
+    <Button
+        style="@style/Texview_permisos"
+        android:layout_height="74dp"
+        android:layout_marginTop="140dp"
+        android:text="@string/Tipo2_permiso" />
+
+    <Button
+        style="@style/Texview_permisos"
+        android:layout_height="74dp"
+        android:layout_marginTop="210dp"
+        android:text="@string/Tipo3_permiso" />
+
+    <LinearLayout
+        android:layout_width="375dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/horarios"
+        android:layout_marginTop="300dp">
+        <TextView
+            android:textColor="@color/font_color"
+            android:drawableLeft="@drawable/ic_clock"
+            android:paddingLeft="150dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Horarios"/>
+    </LinearLayout>
+
+
+
+
+</FrameLayout>
